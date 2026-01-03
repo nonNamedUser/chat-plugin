@@ -1,6 +1,6 @@
 --[[
 MIT License
-(c) nonNamedUser
+(c) 2026 nonNamedUser
 https://github.com/nonNamedUser/chat-plugin
 ]]
 
@@ -115,6 +115,7 @@ for _, g in folder:GetChildren() do
 		end)
 		g.msg.Changed:Connect(function(val)
 			if not running and g.Name~=tostring(userId) then
+				timeout=7
 				t()
 			end
 			template.msg.Text=val
@@ -155,6 +156,7 @@ folder.ChildAdded:Connect(function(child)
 		end)
 		g.msg.Changed:Connect(function(val)
 			if not running and g.Name~=tostring(userId) then
+				timeout=7
 				t()
 			end
 			template.msg.Text=val
