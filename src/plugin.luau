@@ -111,6 +111,10 @@ for _, g in folder:GetChildren() do
 		g.bg.UIGradient.Changed:Connect(function(prop)
 			if string.lower(prop)=="color" then
 				template.UIGradient.Color=g.bg.UIGradient.Color
+			elseif string.lower(prop)=="rotation" then
+				template.UIGradient.Rotation=g.bg.UIGradient.Rotation
+			elseif string.lower(prop)=="offset" then
+				template.UIGradient.Offset=g.bg.UIGradient.Offset
 			end
 		end)
 		g.msg.Changed:Connect(function(val)
@@ -152,6 +156,10 @@ folder.ChildAdded:Connect(function(child)
 		g.bg.UIGradient.Changed:Connect(function(prop)
 			if string.lower(prop)=="color" then
 				template.UIGradient.Color=g.bg.UIGradient.Color
+			elseif string.lower(prop)=="rotation" then
+				template.UIGradient.Rotation=g.bg.UIGradient.Rotation
+			elseif string.lower(prop)=="offset" then
+				template.UIGradient.Offset=g.bg.UIGradient.Offset
 			end
 		end)
 		g.msg.Changed:Connect(function(val)
